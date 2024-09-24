@@ -2,11 +2,17 @@ package no.hvl.dat100.matriser;
 
 public class Matriser {
 
+	public static void main(String[] args) {
+		
+	}
+
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
 		// TODO
 		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+
+
 	}
 
 	// b)
@@ -49,4 +55,5 @@ public class Matriser {
 		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
 	
 	}
+
 }
