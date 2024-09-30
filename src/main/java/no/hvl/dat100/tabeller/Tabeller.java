@@ -102,11 +102,11 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		boolean sortert = true;
+		boolean sortert = false;
 
 		for (int i = 0; i < tabell.length - 1; i++){
-			if (tabell[i] > tabell[i+1]) {
-				sortert = false;
+			if (tabell[i] < tabell[i+1]) {
+				sortert = true;
 			}
 		}
 		return sortert;
@@ -119,6 +119,8 @@ public class Tabeller {
 
 		for (int i = 0; i < tabell1.length; i++ ) {
 			tab[i] = tabell1[i];
+		}
+		for (int i = 0; i< tabell2.length; i++){	// legger til to for-løkker, i tilfelle det er forskjellig lengde på de to tabellene
 			tab[i + tabell1.length] = tabell2[i];
 			}
 
