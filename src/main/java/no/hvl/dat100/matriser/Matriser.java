@@ -137,10 +137,8 @@ public class Matriser {
 		for (int[] rad : matrise){
 			int n = 0;
 			for (int s : rad){
-				// Snur rekkefølge på matrisen
-				spMat[m][n] = matrise[matrise.length - m - 1][matrise[0].length - n- 1];
+				spMat[m][n] = matrise[n][m]; // Speiler matrisen
 				n++;
-				// Hvis det kun er elementene som skal snus, kan kollone index byttes til kunn m
 			}
 			m++;
 		}
