@@ -42,7 +42,11 @@ public class Tabeller {
 	
 	// b)
 	public static String tilStreng(int[] tabell) {
-
+		
+		 if (tabell.length == 0) {
+		        return "[]";
+		    }
+		 
 		String start = "[";
 		String str = "";
 		for (int i = 0; i < tabell.length - 1; i++) {
