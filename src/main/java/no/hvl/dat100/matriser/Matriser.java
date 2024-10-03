@@ -137,10 +137,8 @@ public class Matriser {
 		for (int[] rad : matrise){
 			int n = 0;
 			for (int s : rad){
-				// Snur rekkefølge på matrisen
-				spMat[m][n] = matrise[matrise.length - m - 1][matrise[0].length - n- 1];
+				spMat[m][n] = matrise[n][m]; // Speiler matrisen
 				n++;
-				// Hvis det kun er elementene som skal snus, kan kollone index byttes til kunn m
 			}
 			m++;
 		}
@@ -150,12 +148,14 @@ public class Matriser {
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
-	    int[][] ab = new int[a.length][b[0].length];
+	    
+		// Lager matrise med korrekt størrelse
+		int[][] ab = new int[a.length][b[0].length];
 
 	    for (int i = 0; i < a.length; i++) {
 	        for (int j = 0; j < b[0].length; j++) {
 	            for (int k = 0; k < b.length; k++) {
-	                ab[i][j] += a[i][k] * b[k][j];
+	                ab[i][j] += a[i][k] * b[k][j];	// Hvert element i ab skal summere de multipliserte elementene fra a og b
 	            }
 	        }
 	    }
